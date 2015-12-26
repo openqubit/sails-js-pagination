@@ -1,0 +1,49 @@
+    <div class="container">
+      <div class="page-header">
+        <h1>Show <% _.each(js, function (corndog) { %>
+    <%= corndog.erow%>
+    <% }) %></h1>
+      </div>
+      <div class="row">
+	  <div class="col-md-12">
+      <div>
+  <h1>All Posts</h1>
+  <ul>
+    <% _.each(post, function (corndog) { %>
+    <li><%= corndog.post_title%> :: <%= corndog.post_teaser%></li>
+    <% }) %>
+  </ul>
+        <div class="text-center">
+         <ul class="pager pagination">
+		<li class="previous"><a href="/noder/orm/<%= the_prev %>">&larr; Previous</a></li>
+    <li>
+		<% for(var i=1; i<=tot; i++) { %>
+         <a href="/noder/orm/<%= i %>"><%= i %></a>
+       <% } %>
+</li>
+	
+	<li class="next"><a href="/noder/orm/<%= the_next %>">Next &rarr;</a></li>
+
+</ul>
+</div>
+
+</div>
+
+	  </div>
+	  <div class="col-md-offset-6 col-md-6">
+
+    <ul class="list-group">
+
+        <li class="list-group-item">Like</li>
+
+        <li class="list-group-item">Save</li>        
+
+        <li class="list-group-item">Dislike</li>
+
+        <li class="list-group-item">Archive</li>
+
+    </ul>
+
+</div>
+	  </div>
+    </div>
